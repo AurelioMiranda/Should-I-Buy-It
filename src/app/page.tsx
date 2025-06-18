@@ -15,6 +15,7 @@ const questions = [
 ]
 
 export default function Home() {
+  const [started, setStarted] = useState(false)
   const [answers, setAnswers] = useState<number[]>(Array(questions.length).fill(50))
   const [currentIndex, setCurrentIndex] = useState(0)
   const [submitted, setSubmitted] = useState(false)
@@ -28,8 +29,8 @@ export default function Home() {
   }, [submitted])
 
   const countToValue = (value: number) => {
-      const controls = animate(count, value, { duration: 5 })
-      return () => controls.stop()
+    const controls = animate(count, value, { duration: 5 })
+    return () => controls.stop()
   }
 
   const handleChange = (value: number) => {
@@ -62,6 +63,18 @@ export default function Home() {
 
   const total = answers.reduce((acc, val) => acc + val, 0)
   const maxTotal = questions.length * 100
+
+  if (!started) {
+    return (
+      <div style={{
+        maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center', 
+        display: 'flex', alignItems: 'center', flexDirection: 'column'
+      }}>
+        <h1 style={{marginBottom: '20px'}}>Want to know if you should buy something?</h1>
+        <DynamicButton text="Take the test" onClick={() => setStarted(true)} />
+      </div>
+    )
+  }
 
   if (submitted) {
     return (
