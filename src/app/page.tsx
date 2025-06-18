@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { animate, motion, useMotionValue, useTransform } from "motion/react"
+import DynamicButton from '@/components/DynamicButton'
+import { useEffect, useState } from 'react'
 
 const questions = [
   { id: 1, text: 'Do you really need it?' },
@@ -16,6 +18,19 @@ export default function Home() {
   const [answers, setAnswers] = useState<number[]>(Array(questions.length).fill(50))
   const [currentIndex, setCurrentIndex] = useState(0)
   const [submitted, setSubmitted] = useState(false)
+  const count = useMotionValue(0)
+  const rounded = useTransform(() => Math.round(count.get()))
+
+  useEffect(() => {
+    if (submitted) {
+      countToValue(Math.round((total / maxTotal) * 100))
+    }
+  }, [submitted])
+
+  const countToValue = (value: number) => {
+      const controls = animate(count, value, { duration: 5 })
+      return () => controls.stop()
+  }
 
   const handleChange = (value: number) => {
     const newAnswers = [...answers]
@@ -50,24 +65,26 @@ export default function Home() {
 
   if (submitted) {
     return (
-      <div style={{ maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
-        <h1>Result:</h1>
-        <br/>
+      <div style={{
+        maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center',
+        display: 'flex', alignItems: 'center', flexDirection: 'column'
+      }}>
+        <h1>Results</h1>
+        <br />
         <p>
-          Your total score is <strong>{total}</strong> out of {maxTotal}
+          Your final score is
         </p>
-        <br/>
+        <motion.pre style={text}>{rounded}</motion.pre>
+        <br />
         <p>
           {total >= 75 * questions.length
             ? 'Yes, it seems worth it!'
             : total >= 50 * questions.length
-            ? 'Maybe. Think a bit more.'
-            : 'No, probably not a good idea.'}
+              ? 'Maybe. Think a bit more.'
+              : 'No, probably not a good idea.'}
         </p>
-        <br/>
-        <button onClick={handleReset} style={{ padding: '0.5rem 1rem' }}>
-          Redo quiz
-        </button>
+        <br />
+        <DynamicButton text="Redo quiz" onClick={handleReset} />
       </div>
     )
   }
@@ -78,36 +95,47 @@ export default function Home() {
       <p style={{ textAlign: 'center', marginBottom: '20px' }}>Slide toward “Yes” or “No” for each question.</p>
 
       <div style={{ marginBottom: 20 }}>
-        <label style={{ display: 'block', marginBottom: 8 }}>{questions[currentIndex].text}</label>
-        <input
-          type="range"
-          min={0}
-          max={100}
-          value={answers[currentIndex]}
-          onChange={(e) => handleChange(Number(e.target.value))}
-          style={{ width: '100%' }}
-        />
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#555' }}>
-          <span>No</span>
-          <span>Yes</span>
-        </div>
+        <motion.div
+          key={questions[currentIndex].id}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", duration: 0.4, bounce: 0.2 },
+          }}>
+          <label style={{ display: 'block', marginBottom: 8 }}>{questions[currentIndex].text}</label>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={answers[currentIndex]}
+            onChange={(e) => handleChange(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#555' }}>
+            <span>No</span>
+            <span>Yes</span>
+          </div>
+        </motion.div>
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <button onClick={goBack} disabled={currentIndex === 0} style={{ padding: '0.5rem 1rem' }}>
-          Back
-        </button>
+        {currentIndex !== 0 ?
+          (<DynamicButton text="Back" onClick={goBack} />) :
+          (<div></div>)
+        }
 
         {currentIndex === questions.length - 1 ? (
-          <button onClick={handleSubmit} style={{ padding: '0.5rem 1rem' }}>
-            Get Recommendation
-          </button>
+          <DynamicButton text="See Results" onClick={handleSubmit} />
         ) : (
-          <button onClick={goNext} style={{ padding: '0.5rem 1rem' }}>
-            Next
-          </button>
+          <DynamicButton text="Next" onClick={goNext} />
         )}
       </div>
     </div>
   )
+}
+
+const text = {
+  fontSize: 64,
+  color: "#8df0cc",
 }
