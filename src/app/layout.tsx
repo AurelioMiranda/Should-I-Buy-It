@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import CursorMotion from '@/components/CursorMotion'
 import BackgroundMotion from '@/components/BackgroundMotion'
+import {NextIntlClientProvider} from 'next-intl';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,7 @@ export default function RootLayout({
         <Navbar />
         <CursorMotion />
         <BackgroundMotion />
-        <main className="p-6">{children}</main>
+        <main className="p-6"><NextIntlClientProvider>{children}</NextIntlClientProvider></main>
       </body>
     </html>
   )

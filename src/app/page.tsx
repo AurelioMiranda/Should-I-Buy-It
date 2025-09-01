@@ -3,6 +3,8 @@
 import { animate, motion, useMotionValue, useTransform } from "motion/react"
 import DynamicButton from '@/components/DynamicButton'
 import { useEffect, useState } from 'react'
+import {useTranslations} from 'next-intl';
+
 
 const questions = [
   { id: 1, text: 'Do you really need it?' },
@@ -21,6 +23,8 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false)
   const count = useMotionValue(0)
   const rounded = useTransform(() => Math.round(count.get()))
+
+  const t = useTranslations('HomePage');
 
   useEffect(() => {
     if (submitted) {
@@ -70,7 +74,7 @@ export default function Home() {
         maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center', 
         display: 'flex', alignItems: 'center', flexDirection: 'column'
       }}>
-        <h1 style={{marginBottom: '20px'}}>Want to know if you should buy something?</h1>
+        <h1 style={{marginBottom: '20px'}}>{t('title')}</h1>
         <DynamicButton text="Take the test" onClick={() => setStarted(true)} />
       </div>
     )
