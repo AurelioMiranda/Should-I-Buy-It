@@ -1,5 +1,30 @@
 {
   "HomePage": {
-    "title": "Want to know if you should buy something?"
+    "title": "Want to know if you should buy something?",
+    "startButton": "Take the test",
+    "quizTitle": "Should I buy it?",
+    "quizInstructions": "Slide toward “Yes” or “No” for each question.",
+    "back": "Back",
+    "next": "Next",
+    "seeResults": "See Results",
+    "resultsTitle": "Results",
+    "finalScore": "Your final score is",
+    "resultYes": "Yes, it seems worth it!",
+    "resultMaybe": "Maybe. Think a bit more.",
+    "resultNo": "No, probably not a good idea.",
+    "redoQuiz": "Redo quiz",
+    "answers": {
+      "no": "No",
+      "yes": "Yes"
+    },
+    "questions": {
+      "1": "Do you really need it?",
+      "2": "Do you want it?",
+      "3": "Can you afford it comfortably?",
+      "4": "Will it help you long-term?",
+      "5": "Will you use it long-term?",
+      "6": "Is it better than what you already have?",
+      "7": "Do you have room for it?"
+    }
   }
 }

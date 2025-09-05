@@ -3,20 +3,22 @@
 import { animate, motion, useMotionValue, useTransform } from "motion/react"
 import DynamicButton from '@/components/DynamicButton'
 import { useEffect, useState } from 'react'
-import {useTranslations} from 'next-intl';
-
-
-const questions = [
-  { id: 1, text: 'Do you really need it?' },
-  { id: 2, text: 'Do you want it?' },
-  { id: 3, text: 'Can you afford it comfortably?' },
-  { id: 4, text: 'Will it help you long-term?' },
-  { id: 5, text: 'Will you use it long-term?' },
-  { id: 6, text: 'Is it better than what you already have?' },
-  { id: 7, text: 'Do you have room for it?' },
-]
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+
+  const t = useTranslations('HomePage');
+
+  const questions = [
+    { id: 1, text: t('questions.1') },
+    { id: 2, text: t('questions.2') },
+    { id: 3, text: t('questions.3') },
+    { id: 4, text: t('questions.4') },
+    { id: 5, text: t('questions.5') },
+    { id: 6, text: t('questions.6') },
+    { id: 7, text: t('questions.7') },
+  ];
+
   const [started, setStarted] = useState(false)
   const [answers, setAnswers] = useState<number[]>(Array(questions.length).fill(50))
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -24,7 +26,6 @@ export default function Home() {
   const count = useMotionValue(0)
   const rounded = useTransform(() => Math.round(count.get()))
 
-  const t = useTranslations('HomePage');
 
   useEffect(() => {
     if (submitted) {
@@ -71,11 +72,11 @@ export default function Home() {
   if (!started) {
     return (
       <div style={{
-        maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center', 
+        maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center',
         display: 'flex', alignItems: 'center', flexDirection: 'column'
       }}>
-        <h1 style={{marginBottom: '20px'}}>{t('title')}</h1>
-        <DynamicButton text="Take the test" onClick={() => setStarted(true)} />
+        <h1 style={{ marginBottom: '20px' }}>{t('title')}</h1>
+        <DynamicButton text={t('startButton')} onClick={() => setStarted(true)} />
       </div>
     )
   }
@@ -86,30 +87,29 @@ export default function Home() {
         maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif', textAlign: 'center',
         display: 'flex', alignItems: 'center', flexDirection: 'column'
       }}>
-        <h1>Results</h1>
+        <h1>{t('resultsTitle')}</h1>
         <br />
-        <p>
-          Your final score is
-        </p>
+        <p>{t('finalScore')}</p>
         <motion.pre style={text}>{rounded}</motion.pre>
         <br />
         <p>
           {total >= 75 * questions.length
-            ? 'Yes, it seems worth it!'
+            ? t('resultYes')
             : total >= 50 * questions.length
-              ? 'Maybe. Think a bit more.'
-              : 'No, probably not a good idea.'}
+              ? t('resultMaybe')
+              : t('resultNo')}
         </p>
         <br />
-        <DynamicButton text="Redo quiz" onClick={handleReset} />
+        <DynamicButton text={t('redoQuiz')} onClick={handleReset} />
       </div>
     )
   }
 
   return (
     <div style={{ maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Should I buy it?</h1>
-      <p style={{ textAlign: 'center', marginBottom: '20px' }}>Slide toward “Yes” or “No” for each question.</p>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>{t('quizTitle')}</h1>
+      <p style={{ textAlign: 'center', marginBottom: '20px' }}>{t('quizInstructions')}</p>
+
 
       <div style={{ marginBottom: 20 }}>
         <motion.div
@@ -130,22 +130,22 @@ export default function Home() {
             style={{ width: '100%' }}
           />
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#555' }}>
-            <span>No</span>
-            <span>Yes</span>
+            <span>{t('answers.no')}</span>
+            <span>{t('answers.yes')}</span>
           </div>
         </motion.div>
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         {currentIndex !== 0 ?
-          (<DynamicButton text="Back" onClick={goBack} />) :
+          (<DynamicButton text={t('back')} onClick={goBack} />) :
           (<div></div>)
         }
 
         {currentIndex === questions.length - 1 ? (
-          <DynamicButton text="See Results" onClick={handleSubmit} />
+          <DynamicButton text={t('seeResults')} onClick={handleSubmit} />
         ) : (
-          <DynamicButton text="Next" onClick={goNext} />
+          <DynamicButton text={t('next')} onClick={goNext} />
         )}
       </div>
     </div>
