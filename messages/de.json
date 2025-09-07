@@ -1,0 +1,30 @@
+{
+  "HomePage": {
+    "title": "Möchtest du wissen, ob du etwas kaufen solltest?",
+    "startButton": "Test starten",
+    "quizTitle": "Soll ich es kaufen??",
+    "quizInstructions": "Schiebe den Regler bei jeder Frage auf „Ja“ oder „Nein“.",
+    "back": "Zurück",
+    "next": "Weiter",
+    "seeResults": "Ergebnisse anzeigen",
+    "resultsTitle": "Ergebnisse",
+    "finalScore": "Dein Endergebnis lautet:",
+    "resultYes": "Ja, es scheint sich zu lohnen!",
+    "resultMaybe": "Vielleicht. Denk noch ein bisschen nach.",
+    "resultNo": "Nein, wahrscheinlich keine gute Idee.",
+    "redoQuiz": "Quiz neu starten",
+    "answers": {
+      "no": "Nein",
+      "yes": "Ja"
+    },
+    "questions": {
+      "1": "Brauchst du es wirklich?",
+      "2": "Willst du es?",
+      "3": "Kannst du es dir problemlos leisten?",
+      "4": "Hilft es dir langfristig?",
+      "5": "Wirst du es langfristig nutzen?",
+      "6": "Ist es besser als das, was du schon hast?",
+      "7": "Hast du Platz dafür?"
+    }
+  }
+}

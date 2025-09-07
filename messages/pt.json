@@ -1,5 +1,30 @@
 {
   "HomePage": {
-    "title": "Quer saber se deveria comprar algo?"
+    "title": "Queres saber se deverias comprar algo?",
+    "startButton": "Faz o teste agora",
+    "quizTitle": "Devo comprá-lo?",
+    "quizInstructions": "Move a barra para o \"sim\" ou para o \"não\" para cada pergunta.",
+    "back": "Retroceder",
+    "next": "Continuar",
+    "seeResults": "Ver Resultados",
+    "resultsTitle": "Resultados",
+    "finalScore": "Eis a tua pontuação final",
+    "resultYes": "Sim vale a pena!",
+    "resultMaybe": "Talvez. Deves pensar melhor na tua decisão",
+    "resultNo": "Não, não parece ser uma boa ideia.",
+    "redoQuiz": "Fazer o teste novamente",
+    "answers": {
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "questions": {
+      "1": "Precisas desse objeto?",
+      "2": "Queres tê-lo?",
+      "3": "Podes comprá-lo sem teres problemas na carteira?",
+      "4": "Isso vai ajudar-te a longo prazo?",
+      "5": "Vais usá-lo a longo prazo?",
+      "6": "É melhor do que já tens agora?",
+      "7": "Tens espaço para isso?"
+    }
   }
 }

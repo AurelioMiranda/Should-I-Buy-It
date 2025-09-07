@@ -1,5 +1,30 @@
 {
   "HomePage": {
-    "title": "Vous voulez savoir something something?"
+    "title": "Tu veux savoir si tu devrais acheter une chose que tu souhaites?",
+    "startButton": "Fais le test",
+    "quizTitle": "Devrais-je l'acheter?",
+    "quizInstructions": "Glisse la barre vers le \"oui\" ou le \"non\" pour chaque question",
+    "back": "Précedent",
+    "next": "Suivant",
+    "seeResults": "Voir les résultats",
+    "resultsTitle": "Résultats",
+    "finalScore": "Ton score final est : ",
+    "resultYes": "Oui, ça a l'air d'en valoir la peine!",
+    "resultMaybe": "Peut-être. Penses-y à deux fois.",
+    "resultNo": "Non, c'est probablement pas une bonne idée.",
+    "redoQuiz": "Refaire le Quizz",
+    "answers": {
+      "no": "Non",
+      "yes": "Oui"
+    },
+    "questions": {
+      "1": "En as-tu vraiment besoin?",
+      "2": "Tu le veux vraiment?",
+      "3": "Tu peux te l'acheter sans problèmes?",
+      "4": "Ça va t'aider sur le long terme?",
+      "5": "Vas-tu l'utiliser sur le long terme?",
+      "6": "Est ce que c'est meilleur que ce que tu possèdes maintenant?",
+      "7": "Tu as la place pour cette chose?"
+    }
   }
 }

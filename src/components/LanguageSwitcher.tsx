@@ -1,12 +1,14 @@
 "use client";
 
 import { usePathname, useRouter, useParams } from "next/navigation";
-import { useTransition } from "react";
+import { useTransition, useEffect, useState } from "react";
 
 const locales = [
   { code: "en", label: "English" },
   { code: "pt", label: "Português" },
-  { code: "fr", label: "Français" }
+  { code: "fr", label: "Français" },
+  { code: "de", label: "Deutsch" },
+  { code: "zh", label: "中文" }
 ];
 
 export default function LanguageSwitcher() {
@@ -15,14 +17,26 @@ export default function LanguageSwitcher() {
   const params = useParams();
   const [isPending, startTransition] = useTransition();
 
-  const currentLocale = params.locale as string;
+  // state for current locale
+  const [currentLocale, setCurrentLocale] = useState<string>(params.locale as string);
+
+  // detect cookie on client
+  useEffect(() => {
+    const match = document.cookie.match(/(?:^|;\s*)locale=([^;]+)/);
+    if (match && locales.some(l => l.code === match[1])) {
+      setCurrentLocale(match[1]);
+    } else {
+      setCurrentLocale(params.locale as string);
+    }
+  }, [params.locale]);
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const newLocale = e.target.value;
 
-    // 1. Set cookie on client
+    // set cookie
     document.cookie = `locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 30}`;
 
+    setCurrentLocale(newLocale);
 
     startTransition(() => {
       router.refresh();
