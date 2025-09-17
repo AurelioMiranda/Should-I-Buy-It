@@ -26,5 +26,25 @@
       "6": "Is it better than what you already have?",
       "7": "Do you have room for it?"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective date: {date}",
+    "summaryTitle": "Summary",
+    "summary": "This site stores cookies only in your browser. We do not collect, transmit, or store any personal information on our servers. No other information is recorded or retained by this site.",
+    "whatWeStoreTitle": "What we store",
+    "whatWeStore": "Cookies in your browser only: We use browser cookies to keep language settings. These values are stored locally on your device and are not sent to our servers.",
+    "whatWeDoNotDoTitle": "What we do NOT do",
+    "noPersonalData": "We do not collect or store personal data (name, email, IP address, etc.) on our servers.",
+    "noThirdPartySharing": "We do not send cookie or local storage content to any third party or server.",
+    "noTracking": "We do not use third-party analytics, advertising, or tracking services.",
+    "cookieDurationTitle": "How long cookies remain",
+    "cookieDuration": "Cookies and local storage remain on your device until they expire or you clear them through your browser settings. You can delete them at any time in your browser.",
+    "yourChoicesTitle": "Your choices",
+    "yourChoices": "You can control or delete cookies via your browser settings. Disabling or removing cookies may affect site functionality (for example, selected language may be forgotten).",
+    "changesTitle": "Changes to this policy",
+    "changes": "If this site adds server-side storage, analytics, or third-party services in the future, this Policy will be updated and the new behavior will be disclosed.",
+    "contactTitle": "Contact",
+    "contactText": "If you have questions about this policy, contact the site owner at:"
   }
 }
