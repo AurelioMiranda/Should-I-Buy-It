@@ -108,7 +108,7 @@ export default function Home() {
   return (
     <div style={{ maxWidth: 500, margin: '2rem auto', fontFamily: 'Arial, sans-serif' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>{t('quizTitle')}</h1>
-      <p style={{ textAlign: 'center', marginBottom: '20px' }}>{t('quizInstructions')}</p>
+      <p style={{ textAlign: 'center', marginBottom: '40px' }}>{t('quizInstructions')}</p>
 
 
       <div style={{ marginBottom: 20 }}>

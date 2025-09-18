@@ -6,9 +6,14 @@ import { useEffect, useState } from 'react'
 export default function CursorMotion() {
     const [position, setPosition] = useState({ x: 0, y: 0 })
     const [isPointerCursor, setIsPointerCursor] = useState(false)
+    const [isDesktop, setIsDesktop] = useState(true)
 
     useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
+        // Detect if device uses fine pointer (mouse, trackpad) vs coarse (touch)
+        const mq = window.matchMedia('(pointer: fine)')
+        setIsDesktop(mq.matches)
+
+        const updatePointer = (e: MouseEvent) => {
             setPosition({ x: e.clientX, y: e.clientY })
 
             const element = e.target as HTMLElement
@@ -22,9 +27,18 @@ export default function CursorMotion() {
             }
         }
 
-        window.addEventListener('mousemove', handleMouseMove)
-        return () => window.removeEventListener('mousemove', handleMouseMove)
+        if (mq.matches) {
+            window.addEventListener('mousemove', updatePointer)
+        }
+
+        return () => {
+            document.body.style.cursor = ''
+            window.removeEventListener('mousemove', updatePointer)
+        }
     }, [])
+
+    // Load empty tag instead of cursor seeker
+    if (!isDesktop) return <span style={{position: 'fixed'}}></span>
 
     return (
         <motion.div
