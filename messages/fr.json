@@ -3,7 +3,7 @@
     "title": "Tu veux savoir si tu devrais acheter une chose que tu souhaites?",
     "startButton": "Fais le test",
     "quizTitle": "Devrais-je l'acheter?",
-    "quizInstructions": "Glisse la barre vers le \"oui\" ou le \"non\" pour chaque question",
+    "quizInstructions": "Glisse la barre vers \"oui\" ou \"non\" pour chaque question",
     "back": "Précedent",
     "next": "Suivant",
     "seeResults": "Voir les résultats",
@@ -26,5 +26,25 @@
       "6": "Est ce que c'est meilleur que ce que tu possèdes maintenant?",
       "7": "Tu as la place pour cette chose?"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Protection des données",
+    "effectiveDate": "Date d’entrée en vigueur : {date}",
+    "summaryTitle": "Résumé",
+    "summary": "Ce site utilise uniquement des cookies dans votre navigateur. Nous ne collectons, ne transmettons ni ne conservons aucune donnée personnelle sur nos serveurs. Aucune autre information n’est enregistrée ou retenue par ce site.",
+    "whatWeStoreTitle": "Ce que nous conservons",
+    "whatWeStore": "Uniquement des cookies dans votre navigateur : nous utilisons des cookies pour mémoriser vos préférences de langue. Ces informations sont stockées localement sur votre appareil et ne sont pas transmises à nos serveurs.",
+    "whatWeDoNotDoTitle": "Ce que nous NE faisons PAS",
+    "noPersonalData": "Nous ne collectons ni ne conservons de données personnelles (nom, e-mail, adresse IP, etc.) sur nos serveurs.",
+    "noThirdPartySharing": "Nous ne transmettons aucun contenu issu des cookies ou du stockage local à des tiers ni à d’autres serveurs.",
+    "noTracking": "Nous n’utilisons aucun service tiers d’analyse, de publicité ou de suivi.",
+    "cookieDurationTitle": "Durée de conservation des cookies",
+    "cookieDuration": "Les cookies et les données de stockage local restent sur votre appareil jusqu’à leur expiration ou leur suppression via les paramètres de votre navigateur. Vous pouvez les supprimer à tout moment dans votre navigateur.",
+    "yourChoicesTitle": "Vos choix",
+    "yourChoices": "Vous pouvez gérer ou supprimer les cookies dans les paramètres de votre navigateur. La désactivation ou la suppression des cookies peut affecter le bon fonctionnement du site (par exemple, la langue choisie pourrait ne plus être mémorisée).",
+    "changesTitle": "Modifications concernant la protection des données",
+    "changes": "Si ce site ajoute à l’avenir un stockage côté serveur, des outils d’analyse ou des services tiers, ces pratiques seront mises à jour et clairement communiquées dans la présente section sur la protection des données.",
+    "contactTitle": "Contact",
+    "contactText": "Pour toute question concernant la protection de vos données, vous pouvez contacter le propriétaire du site à l’adresse suivante :"
   }
 }

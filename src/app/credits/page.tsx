@@ -13,13 +13,13 @@ const people: Person[] = [
   {
     name: 'Aurélio Miranda',
     role: 'Developer',
-    image: '/photos/picture.png',
+    image: '/photos/picture2.png',
     linkedin: 'https://www.linkedin.com/in/mirandex/'
   },
   {
     name: 'Rodrigo Ferreira',
     role: 'Translator',
-    image: '/images/bob.jpg',
+    image: '/photos/rod2.jpeg',
     linkedin: 'https://www.linkedin.com/in/bobsmith/'
   }
 ]
@@ -74,6 +74,7 @@ export default function CreditsPage() {
               style={{
                 width: '100%',
                 height: 'auto',
+                maxHeight: '224px',
                 borderRadius: '8px',
                 marginBottom: '0.75rem'
               }}

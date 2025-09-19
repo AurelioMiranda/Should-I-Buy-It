@@ -26,5 +26,25 @@
       "6": "它比你已经有的更好吗?",
       "7": "你有地方放它吗?"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "数据保护说明",
+    "effectiveDate": "生效日期：{date}",
+    "summaryTitle": "概述",
+    "summary": "本网站仅在您的浏览器中使用 Cookie，不会在服务器端收集、传输或存储任何个人信息。本网站亦不会记录或保留其他任何数据。",
+    "whatWeStoreTitle": "我们保存的数据",
+    "whatWeStore": "仅限浏览器中的 Cookie：本网站使用 Cookie 以保存您的语言偏好。这些数据仅存储在您的本地设备中，不会被传输至服务器端。",
+    "whatWeDoNotDoTitle": "我们不进行的处理活动",
+    "noPersonalData": "我们不会在服务器端收集、存储或处理任何个人信息（如姓名、电子邮箱、IP 地址等）。",
+    "noThirdPartySharing": "我们不会将 Cookie 或本地存储数据提供、共享或传输给任何第三方或其他服务器。",
+    "noTracking": "我们未使用任何第三方统计分析、广告推送或跟踪服务。",
+    "cookieDurationTitle": "Cookie 的保存期限",
+    "cookieDuration": "Cookie 及本地存储数据会一直保存在您的设备中，直至到期或您通过浏览器设置手动清除。您可随时在浏览器中删除这些数据。",
+    "yourChoicesTitle": "您的权利与选择",
+    "yourChoices": "您可通过浏览器设置管理或删除 Cookie。若您选择停用或删除 Cookie，可能会影响网站的正常运行（例如语言偏好设置可能无法保留）。",
+    "changesTitle": "本数据保护说明的变更",
+    "changes": "如本网站未来新增服务器端存储、统计分析或第三方服务，我们将更新本数据保护说明，并依法告知相关变更事项。",
+    "contactTitle": "联系方式",
+    "contactText": "如您对本数据保护说明或个人信息处理有任何疑问，请通过以下方式与网站所有者联系："
   }
 }

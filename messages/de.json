@@ -26,5 +26,25 @@
       "6": "Ist es besser als das, was du schon hast?",
       "7": "Hast du Platz dafür?"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Datenschutzhinweis",
+    "effectiveDate": "Gültig ab: {date}",
+    "summaryTitle": "Allgemeine Informationen",
+    "summary": "Diese Website setzt ausschließlich Cookies in Ihrem Browser ein. Es werden keine personenbezogenen Daten auf unseren Servern erhoben, übermittelt oder gespeichert. Darüber hinaus werden keine weiteren Informationen durch diese Website verarbeitet oder vorgehalten.",
+    "whatWeStoreTitle": "Von uns verarbeitete Daten",
+    "whatWeStore": "Ausschließlich Cookies im Browser: Wir verwenden Cookies, um Ihre Spracheinstellungen zu speichern. Diese Informationen werden ausschließlich lokal auf Ihrem Endgerät gespeichert und nicht an unsere Server übermittelt.",
+    "whatWeDoNotDoTitle": "Von uns NICHT durchgeführte Verarbeitungen",
+    "noPersonalData": "Wir erheben, speichern oder verarbeiten keine personenbezogenen Daten (z. B. Name, E-Mail-Adresse, IP-Adresse) auf unseren Servern.",
+    "noThirdPartySharing": "Wir übermitteln keine Inhalte aus Cookies oder dem lokalen Speicher an Dritte oder andere Server.",
+    "noTracking": "Wir setzen keine Analyse-, Werbe- oder Tracking-Dienste von Drittanbietern ein.",
+    "cookieDurationTitle": "Speicherdauer von Cookies",
+    "cookieDuration": "Cookies und lokal gespeicherte Daten verbleiben auf Ihrem Endgerät, bis sie ablaufen oder von Ihnen über die Einstellungen Ihres Browsers gelöscht werden. Sie können diese Daten jederzeit selbst entfernen.",
+    "yourChoicesTitle": "Ihre Rechte und Wahlmöglichkeiten",
+    "yourChoices": "Sie können Cookies über die Einstellungen Ihres Browsers verwalten oder löschen. Die Deaktivierung oder Entfernung von Cookies kann die Funktionsfähigkeit dieser Website einschränken (z. B. kann die gewählte Spracheinstellung nicht mehr gespeichert werden).",
+    "changesTitle": "Änderungen dieses Datenschutzhinweises",
+    "changes": "Sollte diese Website künftig serverseitige Datenspeicherung, Analysetools oder Dienste Dritter einsetzen, wird dieser Datenschutzhinweis entsprechend angepasst und die neuen Verarbeitungstätigkeiten werden transparent offengelegt.",
+    "contactTitle": "Kontakt",
+    "contactText": "Bei Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten können Sie den Websitebetreiber unter folgender Adresse kontaktieren:"
   }
 }

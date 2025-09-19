@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Queres saber se deverias comprar algo?",
+    "title": "Queres saber se deves comprar algo?",
     "startButton": "Faz o teste agora",
     "quizTitle": "Devo comprá-lo?",
     "quizInstructions": "Move a barra para o \"sim\" ou para o \"não\" para cada pergunta.",
@@ -26,5 +26,25 @@
       "6": "É melhor do que já tens agora?",
       "7": "Tens espaço para isso?"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidade",
+    "effectiveDate": "Data de entrada em vigor: {date}",
+    "summaryTitle": "Resumo",
+    "summary": "Este site utiliza apenas cookies no seu navegador. Não recolhemos, transmitimos nem armazenamos quaisquer dados pessoais nos nossos servidores. Nenhuma outra informação é registada ou mantida por este site.",
+    "whatWeStoreTitle": "O que armazenamos",
+    "whatWeStore": "Apenas cookies no seu navegador: utilizamos cookies para manter as preferências de idioma. Estes valores são guardados localmente no seu dispositivo e não são enviados para os nossos servidores.",
+    "whatWeDoNotDoTitle": "O que NÃO fazemos",
+    "noPersonalData": "Não recolhemos nem armazenamos dados pessoais (nome, e-mail, endereço IP, etc.) nos nossos servidores.",
+    "noThirdPartySharing": "Não enviamos conteúdos de cookies ou de armazenamento local para terceiros nem para outros servidores.",
+    "noTracking": "Não utilizamos serviços de análise, publicidade ou rastreio de terceiros.",
+    "cookieDurationTitle": "Duração dos cookies",
+    "cookieDuration": "Os cookies e o armazenamento local permanecem no seu dispositivo até expirarem ou serem eliminados através das definições do seu navegador. Pode apagá-los a qualquer momento no seu navegador.",
+    "yourChoicesTitle": "As suas opções",
+    "yourChoices": "Pode controlar ou eliminar os cookies nas definições do seu navegador. Desativar ou remover cookies pode afetar o funcionamento do site (por exemplo, a preferência de idioma pode deixar de ser lembrada).",
+    "changesTitle": "Alterações a esta política",
+    "changes": "Se no futuro este site passar a utilizar armazenamento no servidor, ferramentas de análise ou serviços de terceiros, esta Política será atualizada e esse novo funcionamento será devidamente comunicado.",
+    "contactTitle": "Contacto",
+    "contactText": "Se tiver dúvidas sobre esta política, contacte o proprietário do site através de:"
   }
 }
