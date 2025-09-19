@@ -13,13 +13,13 @@ const people: Person[] = [
   {
     name: 'Aurélio Miranda',
     role: 'Developer',
-    image: '/photos/picture2.png',
+    image: '/photos/picture.png',
     linkedin: 'https://www.linkedin.com/in/mirandex/'
   },
   {
     name: 'Rodrigo Ferreira',
     role: 'Translator',
-    image: '/photos/rod2.jpeg',
+    image: '/photos/rod.jpeg',
     linkedin: 'https://www.linkedin.com/in/bobsmith/'
   }
 ]
