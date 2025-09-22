@@ -20,7 +20,7 @@ const people: Person[] = [
     name: 'Rodrigo Ferreira',
     role: 'Translator',
     image: '/photos/rod.jpeg',
-    linkedin: 'https://www.linkedin.com/in/bobsmith/'
+    linkedin: 'https://www.linkedin.com/in/rodrigo-ferreira-788a91385/'
   }
 ]
 
