@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Should I Buy This?
 
-## Getting Started
+A simple, opinion-based web tool to help users decide whether they should buy something, not by calculating budgets, but by reflecting on motivations and needs.
 
-First, run the development server:
+👉 **Live site:** https://should-i-buy-this.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Purpose
+This tool helps users think twice before making a purchase by asking short, reflective questions such as:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- "Do I need this?"
+- "Do I want this?"
+- "Will this matter in a week or a month?"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal is mindfulness, not financial advice.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
+- Minimalist, distraction-free interface  
+- Multi-language support (English, Português, Français, Deutsch, 中文)  
+- Simple question flow  
+- Clear final suggestion  
+- No tracking, no accounts, no data storage  
+- Works on mobile and desktop
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How It Works
+1. The user opens the website (changes the language if needed).  
+2. The user answers a short sequence of introspective questions.  
+3. A simple qualitative algorithm evaluates the responses.  
+4. The site provides a suggestion: either encouraging or discouraging the purchase.  
+5. Users can reflect on the result and decide at their own pace.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
+- Open the website on any device    
+- Start the questionnaire  
+- Answer honestly  
+- Read the final recommendation  
+- Use the suggestion to guide your decision-making
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Customisation
+Developers can easily adapt the tool by editing:
+
+- The question set  
+- The decision logic  
+- Translations  
+- Styles and layout  
+
+---
+
+## Contributing
+Suggestions are welcome: new questions, new languages, accessibility improvements, design enhancements, or alternative decision logic.
+
+---
+
+## Credits
+- Created by **Aurélio Miranda**  
+- Hosted on Vercel  
+- Inspired by mindful consumption principles
+
+---
